@@ -1,6 +1,13 @@
 """Example workflow for futures momentum analysis."""
 
+import sys
+from pathlib import Path
+
 import pandas as pd
+
+# Add the repository root to the Python import path.
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 from src.returns import calculate_returns
 from src.momentum import (
@@ -9,7 +16,6 @@ from src.momentum import (
     construct_long_short_weights,
 )
 from src.performance import performance_summary
-
 
 def main():
     # Example futures price data
