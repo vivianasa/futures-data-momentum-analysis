@@ -42,7 +42,11 @@ Performance & Risk Evaluation
 futures-data-momentum-analysis/
 │
 ├── README.md
+├── requirements.txt
 ├── .gitignore
+│
+├── examples/
+│   └── example_workflow.py
 │
 └── src/
     ├── data_processing.py
