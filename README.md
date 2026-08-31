@@ -43,12 +43,20 @@ futures-data-momentum-analysis/
 │
 ├── README.md
 ├── requirements.txt
+├── requirements-dev.txt
 ├── .gitignore
 │
 ├── examples/
 │   └── example_workflow.py
 │
+├── tests/
+│   ├── test_data_processing.py
+│   ├── test_returns.py
+│   ├── test_momentum.py
+│   └── test_performance.py
+│
 └── src/
+    ├── __init__.py
     ├── data_processing.py
     ├── returns.py
     ├── momentum.py
@@ -92,6 +100,23 @@ Provides portfolio performance and risk measures, including:
 - Maximum drawdown
 - Historical Value at Risk (VaR)
 
+## Testing
+
+The core calculations are covered by unit tests for:
+
+- Price resampling
+- Return definitions and input validation
+- Momentum ranking and portfolio selection
+- Long-short portfolio weights
+- NAV, drawdown, VaR, Sharpe ratio, and summary metrics
+
+Install development dependencies and run the test suite with:
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
 ## Technologies
 
 - Python
@@ -99,6 +124,7 @@ Provides portfolio performance and risk measures, including:
 - NumPy
 - pyodbc
 - SQL
+- pytest
 
 ## Data and Security
 
